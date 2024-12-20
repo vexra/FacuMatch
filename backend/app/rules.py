@@ -1,5 +1,11 @@
 def get_recommendation(minat, nilai, skill, kepribadian):
     # Aturan berdasarkan minat
+    
+    try:
+        nilai = int(nilai)
+    except ValueError:
+        return {"error": "Nilai harus berupa angka."}
+    
     rules = {
         "kedokteran": {
             "nilai_min": 80,

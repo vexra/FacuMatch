@@ -7,18 +7,12 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{{ route('landing') }}">Beranda</a></li>
-            <li><a href="{{ route('recommendation') }}">Rekomendasi</a></li>
-        </ul>
-    </nav>
-    <main>
-        @if(isset($result['error']))
-            <p>{{ $result['error'] }}</p>
-        @else
-            <p>Rekomendasi Fakultas: {{ $result['fakultas'] }}</p>
-        @endif
-    </main>
+    <h1>Hasil Rekomendasi Fakultas</h1>
+    @if(isset($result['error']))
+        <p>Error: {{ $result['error'] }}</p>
+    @else
+        <p>Fakultas yang direkomendasikan: {{ $result['fakultas'] }}</p>
+    @endif
+    <a href="{{ route('recommendation') }}">Kembali</a>
 </body>
 </html>

@@ -9,19 +9,27 @@ class RecommendationController extends Controller
 {
     public function getRecommendation(Request $request)
     {
-        $client = new Client();
+    // Log data request untuk debugging
+    \Log::info('Received Request Data:', $request->all());
 
-        try {
-            $response = $client->post('http://127.0.0.1:5000/rekomendasi', [
-                'json' => $request->all(),
-            ]);
+    $requestData = $request->all();
+    $requestData['nilai'] = (int) $requestData['nilai'];
 
-            $responseBody = json_decode($response->getBody(), true);
-            return view('recommendation-result', ['result' => $responseBody]);
+    $client = new Client();
 
-        } catch (\Exception $e) {
-            return back()->withErrors(['error' => 'Failed to connect to the expert system backend.']);
-        }
+    try {
+        $response = $client->post('http://127.0.0.1:5000/rekomendasi', [
+            'json' => $request->all(),
+        ]);
+
+        $responseBody = json_decode($response->getBody(), true);
+        return view('recommendation-result', ['result' => $responseBody]);
+
+    } 
+    catch (\Exception $e) {
+        return back()->withErrors(['error' => 'Failed to connect to the expert system backend.']);
     }
+}
+
 }
 

@@ -26,13 +26,37 @@
             </select>
 
             <label for="nilai">Nilai:</label>
-            <input type="number" name="nilai" id="nilai" required>
+            <!-- Input numerik dengan batasan dari 0 hingga 100 -->
+            <input type="number" name="nilai" id="nilai" min="0" max="100" required>
 
-            <label for="skill">Keahlian:</label>
-            <input type="text" name="skill[]" placeholder="Masukkan skill, pisahkan dengan koma" required>
+            <label for="skill">Skill:</label>
+            <select name="skill[]" id="skill" multiple required>
+                <option value="biologi">Biologi</option>
+                <option value="kimia">Kimia</option>
+                <option value="mata pelajaran sains lainnya">Mata Pelajaran Sains Lainnya</option>
+                <option value="matematika">Matematika</option>
+                <option value="fisika">Fisika</option>
+                <option value="logika">Logika</option>
+                <option value="ekonomi">Ekonomi</option>
+                <option value="komunikasi">Komunikasi</option>
+                <option value="bahasa">Bahasa</option>
+            </select>
+            <p><small>*Tekan <b>Ctrl</b> (Windows) atau <b>Command</b> (Mac) untuk memilih lebih dari satu.</small></p>
 
             <label for="kepribadian">Kepribadian:</label>
-            <input type="text" name="kepribadian[]" placeholder="Masukkan kepribadian, pisahkan dengan koma" required>
+            <select name="kepribadian[]" id="kepribadian" multiple required>
+                <option value="empati">Empati</option>
+                <option value="komunikatif">Komunikatif</option>
+                <option value="teliti">Teliti</option>
+                <option value="analitis">Analitis</option>
+                <option value="problem solving">Problem Solving</option>
+                <option value="detil">Detil</option>
+                <option value="strategis">Strategis</option>
+                <option value="logis">Logis</option>
+                <option value="argumentatif">Argumentatif</option>
+                <option value="persuasif">Persuasif</option>
+            </select>
+            <p><small>*Tekan <b>Ctrl</b> (Windows) atau <b>Command</b> (Mac) untuk memilih lebih dari satu.</small></p>
 
             <button type="submit">Dapatkan Rekomendasi</button>
         </form>
