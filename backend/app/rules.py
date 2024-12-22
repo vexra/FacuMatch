@@ -19,21 +19,21 @@ def get_recommendation(minat, nilai, skill, kepribadian):
     # Basis Pengetahuan (berdasarkan sumber seperti deskripsi fakultas umum)
     rules = {
         "kedokteran": {
-            "nilai_min": 80,
+            "nilai_min": 90,
             "skill": ["biologi", "kimia", "mata pelajaran sains lainnya"],
             "kepribadian": ["empati", "komunikatif", "teliti"],
             "fakultas": "Fakultas Kedokteran",
             "sumber": "https://www.example.com/kedokteran"
         },
         "teknik": {
-            "nilai_min": 75,
+            "nilai_min": 80,
             "skill": ["matematika", "fisika", "logika"],
             "kepribadian": ["analitis", "problem solving", "detil"],
             "fakultas": "Fakultas Teknik",
             "sumber": "https://www.example.com/teknik"
         },
         "ekonomi": {
-            "nilai_min": 70,
+            "nilai_min": 80,
             "skill": ["matematika", "ekonomi", "komunikasi"],
             "kepribadian": ["analitis", "strategis", "komunikatif"],
             "fakultas": "Fakultas Ekonomi dan Bisnis",
