@@ -1,27 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, poppins, sans-serif;
+    background-color: #f9f9f9;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+.container {
+    margin-left: 200px;
+    margin-right: 150px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
+.carousel-item img {
+    max-height: 500px; /* Mengatur tinggi maksimum gambar */
+    /* max-width: 1100px; Mengatur lebar maksimum gambar */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+/* Mengatur tampilan kontrol karosel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang untuk kontrol */
+    border-radius: 50%; /* Membuat kontrol berbentuk bulat */
+}
+
+nav{
+    border-bottom: 2px solid #ddd; /* Border bawah untuk navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk navbar */
 }
 
 main {
@@ -37,4 +45,14 @@ form {
 
 form label, form input, form select, form button {
     margin: 0.5rem 0;
+}
+
+
+.row.my-4 {
+    margin-bottom: 30px; /* Jarak bawah antar fakultas */
+}
+
+.img-fluid {
+    width: 100%; /* Memastikan gambar mengambil 100% lebar kolom */
+    border-radius: 5px; /* Sudut membulat untuk gambar */
 }
