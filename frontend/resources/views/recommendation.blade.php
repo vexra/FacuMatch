@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="nilai">Nilai:</label>
+                    <label for="nilai">Nilai Rata-Rata:</label>
                     <input type="number" name="nilai" id="nilai" class="form-control" min="0" max="100" required>
                 </div>
 
